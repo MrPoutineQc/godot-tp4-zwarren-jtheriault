@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dim31s6qf7ign"
+=======
+uid="uid://bt014ssq71yhg"
+>>>>>>> d8b73d3fcced04496499349ff94dbe6909fbf01b
 path="res://.godot/imported/Checkpoint (Flag Idle)(64x64).png-a9a239dc0cb17459dd2bebc570b0d137.ctex"
 metadata={
 "vram_texture": false

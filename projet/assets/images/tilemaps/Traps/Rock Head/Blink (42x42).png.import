@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dah6auebh6vi7"
+=======
+uid="uid://ba25w6ablpbg"
+>>>>>>> d8b73d3fcced04496499349ff94dbe6909fbf01b
 path="res://.godot/imported/Blink (42x42).png-f834de2bdc79b613dc7933ff3b592685.ctex"
 metadata={
 "vram_texture": false
