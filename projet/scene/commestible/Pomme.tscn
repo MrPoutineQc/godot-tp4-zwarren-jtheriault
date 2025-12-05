@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://18su0m1aoqih"]
+[gd_scene load_steps=29 format=3 uid="uid://18su0m1aoqih"]
 
 [ext_resource type="Texture2D" uid="uid://ytkmu4nnbu4f" path="res://assets/images/sprites/Items/Fruits/Apple.png" id="1_3cyfv"]
 [ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="1_g44q0"]
+[ext_resource type="Script" uid="uid://b1iydywd2it8k" path="res://script/commestible/pomme.gd" id="1_lblny"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cpke"]
 atlas = ExtResource("1_g44q0")
@@ -182,6 +183,7 @@ radius = 7.0
 height = 14.0
 
 [node name="Pomme" type="Area2D"]
+script = ExtResource("1_lblny")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://bqt3mv7q8sm4h"]
+[gd_scene load_steps=29 format=3 uid="uid://bqt3mv7q8sm4h"]
 
 [ext_resource type="Texture2D" uid="uid://b7xbqyjdy5kah" path="res://assets/images/sprites/Items/Fruits/Melon.png" id="1_3mxx7"]
 [ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="2_c0jox"]
+[ext_resource type="Script" uid="uid://bhb61iudjswox" path="res://script/commestible/animated_sprite_2d.gd" id="3_8xmwu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0jox"]
 atlas = ExtResource("1_3mxx7")
@@ -186,6 +187,7 @@ radius = 9.0
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
 animation = &"collected"
+script = ExtResource("3_8xmwu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://cmbglpil3xone"]
+[gd_scene load_steps=29 format=3 uid="uid://cmbglpil3xone"]
 
+[ext_resource type="Script" uid="uid://dxwte7jkhfeii" path="res://script/commestible/cherries.gd" id="1_2502c"]
 [ext_resource type="Texture2D" uid="uid://ty2eer4de587" path="res://assets/images/sprites/Items/Fruits/Cherries.png" id="1_pqqwr"]
 [ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="2_kpokg"]
 
@@ -181,6 +182,7 @@ animations = [{
 radius = 8.0
 
 [node name="Cherries" type="Area2D"]
+script = ExtResource("1_2502c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

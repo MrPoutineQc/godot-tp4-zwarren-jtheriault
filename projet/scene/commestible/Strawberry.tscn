@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://dxxxky82x5kka"]
+[gd_scene load_steps=29 format=3 uid="uid://dxxxky82x5kka"]
 
 [ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="1_3c5wg"]
+[ext_resource type="Script" uid="uid://bqldcma8b8t0g" path="res://script/commestible/strawberry.gd" id="1_86nk8"]
 [ext_resource type="Texture2D" uid="uid://bk545w8pdta44" path="res://assets/images/sprites/Items/Fruits/Strawberry.png" id="1_kbs48"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgbt7"]
@@ -182,6 +183,7 @@ radius = 6.0
 height = 16.0
 
 [node name="Strawberry" type="Area2D"]
+script = ExtResource("1_86nk8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
