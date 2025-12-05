@@ -1,8 +1,12 @@
 extends Area2D
 
-@onready var cherries = $AnimatedSprite2D.play("Cherries")
+@onready var cherries = $AnimatedSprite2D
+
+func _ready() -> void:
+	cherries.play("Cherries")
 
 func _on_body_entered(body: Node2D) -> void:
-	$AnimatedSprite2D.hide("Cherries")
-	$AnimatedSprite2D.play("collected")
-	
+	$CollisionShape2D.disabled = true
+	cherries.play("collected")
+	await cherries.animation_finished
+	cherries.hide()

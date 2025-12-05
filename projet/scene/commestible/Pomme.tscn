@@ -117,7 +117,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_teq2t")
 }],
-"loop": true,
+"loop": false,
 "name": &"collected",
 "speed": 9.0
 }, {

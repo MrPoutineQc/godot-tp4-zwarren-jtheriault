@@ -173,7 +173,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ddaqn")
 }],
-"loop": true,
+"loop": false,
 "name": &"collected",
 "speed": 9.0
 }]
@@ -187,7 +187,7 @@ script = ExtResource("1_2502c")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
-animation = &"Cherries"
+animation = &"collected"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

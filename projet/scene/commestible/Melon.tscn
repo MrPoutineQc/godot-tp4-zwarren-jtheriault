@@ -173,7 +173,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5wc3d")
 }],
-"loop": true,
+"loop": false,
 "name": &"collected",
 "speed": 9.0
 }]
