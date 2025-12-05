@@ -1,6 +1,31 @@
-[gd_scene load_steps=21 format=3 uid="uid://cr1jya0nl1hxe"]
+[gd_scene load_steps=28 format=3 uid="uid://cr1jya0nl1hxe"]
 
+[ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="1_40byx"]
 [ext_resource type="Texture2D" uid="uid://7mpcjnwfk5ex" path="res://assets/images/sprites/Items/Fruits/Pineapple.png" id="1_a3g76"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbw4w"]
+atlas = ExtResource("1_40byx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7dbv"]
+atlas = ExtResource("1_40byx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivr3p"]
+atlas = ExtResource("1_40byx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppsdo"]
+atlas = ExtResource("1_40byx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcly1"]
+atlas = ExtResource("1_40byx")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4vt8"]
+atlas = ExtResource("1_40byx")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40byx"]
 atlas = ExtResource("1_a3g76")
@@ -74,6 +99,29 @@ region = Rect2(512, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_lbw4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7dbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivr3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppsdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcly1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4vt8")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_40byx")
 }, {
 "duration": 1.0,
@@ -138,7 +186,7 @@ height = 20.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
-animation = &"pineapple"
+animation = &"collected"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_a3g76")

@@ -1,6 +1,31 @@
-[gd_scene load_steps=21 format=3 uid="uid://0xcy6x3c0qi"]
+[gd_scene load_steps=28 format=3 uid="uid://0xcy6x3c0qi"]
 
+[ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="1_3641v"]
 [ext_resource type="Texture2D" uid="uid://bmwh16iv3dbqj" path="res://assets/images/sprites/Items/Fruits/Orange.png" id="1_pnayt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmlfo"]
+atlas = ExtResource("1_3641v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op07j"]
+atlas = ExtResource("1_3641v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4356"]
+atlas = ExtResource("1_3641v")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4xll"]
+atlas = ExtResource("1_3641v")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjsba"]
+atlas = ExtResource("1_3641v")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydckp"]
+atlas = ExtResource("1_3641v")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3641v"]
 atlas = ExtResource("1_pnayt")
@@ -74,6 +99,29 @@ region = Rect2(512, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_mmlfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op07j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4356")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4xll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjsba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydckp")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_3641v")
 }, {
 "duration": 1.0,
@@ -137,7 +185,7 @@ radius = 8.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
-animation = &"orange"
+animation = &"collected"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)

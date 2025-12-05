@@ -1,6 +1,31 @@
-[gd_scene load_steps=21 format=3 uid="uid://18su0m1aoqih"]
+[gd_scene load_steps=28 format=3 uid="uid://18su0m1aoqih"]
 
 [ext_resource type="Texture2D" uid="uid://ytkmu4nnbu4f" path="res://assets/images/sprites/Items/Fruits/Apple.png" id="1_3cyfv"]
+[ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="1_g44q0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cpke"]
+atlas = ExtResource("1_g44q0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cexy"]
+atlas = ExtResource("1_g44q0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkrui"]
+atlas = ExtResource("1_g44q0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bry22"]
+atlas = ExtResource("1_g44q0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uo3x"]
+atlas = ExtResource("1_g44q0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_teq2t"]
+atlas = ExtResource("1_g44q0")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g44q0"]
 atlas = ExtResource("1_3cyfv")
@@ -74,6 +99,29 @@ region = Rect2(512, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2cpke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cexy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkrui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bry22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uo3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_teq2t")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_g44q0")
 }, {
 "duration": 1.0,
@@ -131,15 +179,14 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3cyfv"]
 radius = 7.0
-height = 16.0
+height = 14.0
 
 [node name="Pomme" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
-animation = &"pomme"
-frame_progress = 0.297313
+animation = &"collected"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)

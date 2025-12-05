@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://e3nty23tqxx2"]
+[gd_scene load_steps=3 format=3 uid="uid://e3nty23tqxx2"]
+
+[ext_resource type="PackedScene" uid="uid://ni6wmmith0h2" path="res://scene/level_1/level_1_map.tscn" id="1_s2vig"]
+[ext_resource type="PackedScene" uid="uid://cpcr3085rm2n2" path="res://scene/player/player.tscn" id="2_miyhc"]
 
 [node name="Level_1" type="Node2D"]
+
+[node name="Level_1_map" parent="." instance=ExtResource("1_s2vig")]
+
+[node name="Player" parent="." instance=ExtResource("2_miyhc")]

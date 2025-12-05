@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqt3mv7q8sm4h"]
+[gd_scene load_steps=28 format=3 uid="uid://bqt3mv7q8sm4h"]
 
 [ext_resource type="Texture2D" uid="uid://b7xbqyjdy5kah" path="res://assets/images/sprites/Items/Fruits/Melon.png" id="1_3mxx7"]
+[ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="2_c0jox"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0jox"]
 atlas = ExtResource("1_3mxx7")
@@ -70,6 +71,30 @@ region = Rect2(480, 0, 32, 32)
 atlas = ExtResource("1_3mxx7")
 region = Rect2(512, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qry0"]
+atlas = ExtResource("2_c0jox")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyfqx"]
+atlas = ExtResource("2_c0jox")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjkpv"]
+atlas = ExtResource("2_c0jox")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqua"]
+atlas = ExtResource("2_c0jox")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83edj"]
+atlas = ExtResource("2_c0jox")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wc3d"]
+atlas = ExtResource("2_c0jox")
+region = Rect2(160, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_2cpke"]
 animations = [{
 "frames": [{
@@ -127,6 +152,29 @@ animations = [{
 "loop": true,
 "name": &"Melon",
 "speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qry0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyfqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjkpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83edj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wc3d")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 9.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3mxx7"]
@@ -137,7 +185,7 @@ radius = 9.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
-animation = &"Melon"
+animation = &"collected"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmbglpil3xone"]
+[gd_scene load_steps=28 format=3 uid="uid://cmbglpil3xone"]
 
 [ext_resource type="Texture2D" uid="uid://ty2eer4de587" path="res://assets/images/sprites/Items/Fruits/Cherries.png" id="1_pqqwr"]
+[ext_resource type="Texture2D" uid="uid://0ovjg2gb46f4" path="res://assets/images/sprites/Items/Fruits/Collected.png" id="2_kpokg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpokg"]
 atlas = ExtResource("1_pqqwr")
@@ -70,6 +71,30 @@ region = Rect2(480, 0, 32, 32)
 atlas = ExtResource("1_pqqwr")
 region = Rect2(512, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_aher6"]
+atlas = ExtResource("2_kpokg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7cwp"]
+atlas = ExtResource("2_kpokg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqrar"]
+atlas = ExtResource("2_kpokg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcvbc"]
+atlas = ExtResource("2_kpokg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6lsc"]
+atlas = ExtResource("2_kpokg")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddaqn"]
+atlas = ExtResource("2_kpokg")
+region = Rect2(160, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_2cpke"]
 animations = [{
 "frames": [{
@@ -127,6 +152,29 @@ animations = [{
 "loop": true,
 "name": &"Cherries",
 "speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aher6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7cwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqrar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcvbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6lsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddaqn")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 9.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pqqwr"]
@@ -137,7 +185,7 @@ radius = 8.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
-animation = &"Cherries"
+animation = &"collected"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
