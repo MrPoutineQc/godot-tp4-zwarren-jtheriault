@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://05838uvqwd7p"]
+[gd_scene load_steps=21 format=3 uid="uid://05838uvqwd7p"]
 
 [ext_resource type="Texture2D" uid="uid://dal24eum63bw3" path="res://assets/images/sprites/Items/Fruits/Bananas.png" id="1_ab6hu"]
 
@@ -129,6 +129,9 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ab6hu"]
+radius = 8.0
+
 [node name="Banana" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -137,3 +140,5 @@ sprite_frames = SubResource("SpriteFrames_2cpke")
 animation = &"Banana"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.0363712
+shape = SubResource("CircleShape2D_ab6hu")

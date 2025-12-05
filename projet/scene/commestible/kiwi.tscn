@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5st2ca6u4lkw"]
+[gd_scene load_steps=21 format=3 uid="uid://b5st2ca6u4lkw"]
 
 [ext_resource type="Texture2D" uid="uid://c5y8fh5mfxxav" path="res://assets/images/sprites/Items/Fruits/Kiwi.png" id="1_5yv3u"]
 
@@ -129,6 +129,9 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5yv3u"]
+radius = 7.0
+
 [node name="Kiwi" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -137,3 +140,4 @@ sprite_frames = SubResource("SpriteFrames_2cpke")
 animation = &"Kiwi"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5yv3u")

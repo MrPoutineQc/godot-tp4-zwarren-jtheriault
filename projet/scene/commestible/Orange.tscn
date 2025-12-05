@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://0xcy6x3c0qi"]
+[gd_scene load_steps=21 format=3 uid="uid://0xcy6x3c0qi"]
 
 [ext_resource type="Texture2D" uid="uid://bmwh16iv3dbqj" path="res://assets/images/sprites/Items/Fruits/Orange.png" id="1_pnayt"]
 
@@ -129,6 +129,9 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pnayt"]
+radius = 8.0
+
 [node name="Orange" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -137,3 +140,5 @@ sprite_frames = SubResource("SpriteFrames_2cpke")
 animation = &"orange"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_pnayt")

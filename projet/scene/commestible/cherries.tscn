@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmbglpil3xone"]
+[gd_scene load_steps=21 format=3 uid="uid://cmbglpil3xone"]
 
 [ext_resource type="Texture2D" uid="uid://ty2eer4de587" path="res://assets/images/sprites/Items/Fruits/Cherries.png" id="1_pqqwr"]
 
@@ -129,6 +129,9 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pqqwr"]
+radius = 8.0
+
 [node name="Cherries" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -137,3 +140,5 @@ sprite_frames = SubResource("SpriteFrames_2cpke")
 animation = &"Cherries"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_pqqwr")

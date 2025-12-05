@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxxxky82x5kka"]
+[gd_scene load_steps=21 format=3 uid="uid://dxxxky82x5kka"]
 
 [ext_resource type="Texture2D" uid="uid://bk545w8pdta44" path="res://assets/images/sprites/Items/Fruits/Strawberry.png" id="1_kbs48"]
 
@@ -129,6 +129,10 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbs48"]
+radius = 6.0
+height = 16.0
+
 [node name="Strawberry" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -137,3 +141,4 @@ sprite_frames = SubResource("SpriteFrames_2cpke")
 animation = &"strawberry"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbs48")
