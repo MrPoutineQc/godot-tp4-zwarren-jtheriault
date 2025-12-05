@@ -193,3 +193,5 @@ frame_progress = 0.781004
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 0.0363712
 shape = SubResource("CircleShape2D_ab6hu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
