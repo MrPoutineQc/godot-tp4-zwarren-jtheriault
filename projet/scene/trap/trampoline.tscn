@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://bsbjsckpaj5y7"]
+
+[ext_resource type="Texture2D" uid="uid://6vbae2fsw0v1" path="res://assets/images/tilemaps/Traps/Trampoline/Jump (28x28).png" id="1_on7i5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj80n"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(0, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aucj6"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(28, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evstu"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(56, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o6fi"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(84, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5jrh"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(112, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smksm"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(140, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp860"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(168, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7704t"]
+atlas = ExtResource("1_on7i5")
+region = Rect2(196, 0, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_37orn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fj80n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aucj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evstu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6o6fi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5jrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smksm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp860")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7704t")
+}],
+"loop": false,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvwni"]
+size = Vector2(23, 10)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_37orn")
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 9)
+shape = SubResource("RectangleShape2D_yvwni")

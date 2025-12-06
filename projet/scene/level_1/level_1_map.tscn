@@ -304,7 +304,8 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAIAAAAAAAU
 tile_set = SubResource("TileSet_4ocav")
 
 [node name="Banana" parent="." instance=ExtResource("2_btoer")]
-position = Vector2(666, 606)
+position = Vector2(666, 602)
+scale = Vector2(2.4, 2.4)
 
 [node name="MapInspiration" type="Sprite2D" parent="."]
 visible = false

@@ -357,8 +357,9 @@ script = ExtResource("1_hfhxk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_tukw2")
-animation = &"double_jump"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
