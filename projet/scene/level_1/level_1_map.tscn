@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ni6wmmith0h2"]
+[gd_scene load_steps=16 format=4 uid="uid://ni6wmmith0h2"]
 
 [ext_resource type="Texture2D" uid="uid://biq3jte87jd6k" path="res://assets/images/sprites/Background/Blue.png" id="1_7k2r1"]
 [ext_resource type="Texture2D" uid="uid://cbmlwrgfdwurl" path="res://assets/images/tilemaps/Terrain/Terrain (16x16).png" id="1_ipsn0"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c70r0dej141db" path="res://scene/trap/platforme.tscn" id="6_gee8m"]
 [ext_resource type="PackedScene" uid="uid://bsbjsckpaj5y7" path="res://scene/trap/trampoline.tscn" id="7_db3bs"]
 [ext_resource type="PackedScene" uid="uid://bypai5m7ex75c" path="res://scene/trap/spike.tscn" id="8_bqqg8"]
+[ext_resource type="Script" uid="uid://bb50rngydr72i" path="res://script/trap/void.gd" id="9_jamly"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_148cm"]
 texture = ExtResource("1_7k2r1")
@@ -343,6 +344,9 @@ texture = ExtResource("1_ipsn0")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_btoer")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paqvt"]
+size = Vector2(162, 20)
+
 [node name="Level_1_map" type="Node2D"]
 
 [node name="TileMapLayer_background" type="TileMapLayer" parent="."]
@@ -360,6 +364,7 @@ position = Vector2(666, 602)
 scale = Vector2(2.4, 2.4)
 
 [node name="MapInspiration" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.627451)
 position = Vector2(573, 338)
 scale = Vector2(1.1582, 1.20394)
@@ -501,3 +506,14 @@ position = Vector2(168, 344)
 
 [node name="platforme3" parent="Platforme" instance=ExtResource("6_gee8m")]
 position = Vector2(291, 283)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(193, 650)
+script = ExtResource("9_jamly")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_paqvt")
+
+[connection signal="body_entered" from="Area2D" to="Banana" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
