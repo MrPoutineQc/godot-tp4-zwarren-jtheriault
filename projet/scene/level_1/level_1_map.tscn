@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://ni6wmmith0h2"]
+[gd_scene load_steps=13 format=4 uid="uid://ni6wmmith0h2"]
 
 [ext_resource type="Texture2D" uid="uid://biq3jte87jd6k" path="res://assets/images/sprites/Background/Blue.png" id="1_7k2r1"]
 [ext_resource type="Texture2D" uid="uid://cbmlwrgfdwurl" path="res://assets/images/tilemaps/Terrain/Terrain (16x16).png" id="1_ipsn0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://05838uvqwd7p" path="res://scene/commestible/Banana.tscn" id="2_btoer"]
 [ext_resource type="Texture2D" uid="uid://515m1xakohps" path="res://assets/images/tilemaps/map_inspiration.jpg" id="5_gee8m"]
 [ext_resource type="PackedScene" uid="uid://c70r0dej141db" path="res://scene/trap/platforme.tscn" id="6_gee8m"]
+[ext_resource type="PackedScene" uid="uid://bsbjsckpaj5y7" path="res://scene/trap/trampoline.tscn" id="7_db3bs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_148cm"]
 texture = ExtResource("1_7k2r1")
@@ -366,3 +367,6 @@ texture = ExtResource("5_gee8m")
 
 [node name="platforme" parent="." instance=ExtResource("6_gee8m")]
 position = Vector2(203, 416)
+
+[node name="trampoline" parent="." instance=ExtResource("7_db3bs")]
+position = Vector2(103, 401)
