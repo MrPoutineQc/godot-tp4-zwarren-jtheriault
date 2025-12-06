@@ -6,6 +6,7 @@ func _ready() -> void:
 	trampoline_anim.play("off")
 
 func _on_body_entered(body: Node2D) -> void:
-	trampoline_anim.play("active")
-	await trampoline_anim.animation_finished
-	trampoline_anim.play("off")
+	if is_in_group("player"):
+		trampoline_anim.play("active")
+		await trampoline_anim.animation_finished
+		trampoline_anim.play("off")
