@@ -366,7 +366,11 @@ scale = Vector2(1.1582, 1.20394)
 texture = ExtResource("5_gee8m")
 
 [node name="platforme" parent="." instance=ExtResource("6_gee8m")]
+<<<<<<< HEAD
 position = Vector2(202, 405)
 
 [node name="trampoline" parent="." instance=ExtResource("7_db3bs")]
 position = Vector2(73, 388)
+=======
+position = Vector2(203, 416)
+>>>>>>> f805002bac560cf70166030fb87956145a7eba53

@@ -1,6 +1,6 @@
-extends Area2D
+extends Node2D
 
 @onready var platforme = $AnimatedSprite2D
 
 func _ready() -> void:
-	platforme.play("active")
+	platforme.play("default")
