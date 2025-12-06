@@ -188,6 +188,7 @@ script = ExtResource("1_xpwq3")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
 animation = &"Banana"
+frame_progress = 0.219249
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 0.0363712

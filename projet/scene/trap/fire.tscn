@@ -89,7 +89,7 @@ size = Vector2(12, 15)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_fs842")
-frame_progress = 0.573885
+frame_progress = 0.333902
 
 [node name="base" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
