@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://bsbjsckpaj5y7"]
+[gd_scene load_steps=15 format=3 uid="uid://bsbjsckpaj5y7"]
 
+[ext_resource type="Script" uid="uid://44smodgn2e6x" path="res://script/trap/trampoline.gd" id="1_aucj6"]
 [ext_resource type="Texture2D" uid="uid://6vbae2fsw0v1" path="res://assets/images/tilemaps/Traps/Trampoline/Jump (28x28).png" id="1_on7i5"]
 [ext_resource type="Texture2D" uid="uid://cfbo8v2n636jg" path="res://assets/images/tilemaps/Traps/Trampoline/Idle.png" id="2_fj80n"]
 
@@ -83,6 +84,7 @@ animations = [{
 size = Vector2(23, 11)
 
 [node name="trampoline" type="Area2D"]
+script = ExtResource("1_aucj6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
