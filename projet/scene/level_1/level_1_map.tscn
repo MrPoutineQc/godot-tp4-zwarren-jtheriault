@@ -369,5 +369,4 @@ texture = ExtResource("5_gee8m")
 position = Vector2(202, 405)
 
 [node name="trampoline" parent="." instance=ExtResource("7_db3bs")]
-position = Vector2(73, 388)
-position = Vector2(203, 416)
+position = Vector2(72, 402)
