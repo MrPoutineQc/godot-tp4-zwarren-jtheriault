@@ -365,5 +365,4 @@ scale = Vector2(1.1582, 1.20394)
 texture = ExtResource("5_gee8m")
 
 [node name="platforme" parent="." instance=ExtResource("6_gee8m")]
-visible = false
-position = Vector2(192, 379)
+position = Vector2(203, 416)
