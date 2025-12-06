@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bsbjsckpaj5y7"]
+[gd_scene load_steps=14 format=3 uid="uid://bsbjsckpaj5y7"]
 
 [ext_resource type="Texture2D" uid="uid://6vbae2fsw0v1" path="res://assets/images/tilemaps/Traps/Trampoline/Jump (28x28).png" id="1_on7i5"]
+[ext_resource type="Texture2D" uid="uid://cfbo8v2n636jg" path="res://assets/images/tilemaps/Traps/Trampoline/Idle.png" id="2_fj80n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fj80n"]
 atlas = ExtResource("1_on7i5")
@@ -34,6 +35,10 @@ region = Rect2(168, 0, 28, 28)
 atlas = ExtResource("1_on7i5")
 region = Rect2(196, 0, 28, 28)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_37orn"]
+atlas = ExtResource("2_fj80n")
+region = Rect2(0, 0, 28, 28)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_37orn"]
 animations = [{
 "frames": [{
@@ -62,21 +67,28 @@ animations = [{
 "texture": SubResource("AtlasTexture_7704t")
 }],
 "loop": false,
-"name": &"default",
+"name": &"active",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37orn")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvwni"]
-size = Vector2(23, 10)
+size = Vector2(23, 11)
 
-[node name="Area2D" type="Area2D"]
+[node name="trampoline" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_37orn")
-frame = 7
-frame_progress = 1.0
+animation = &"off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 9)
+position = Vector2(-0.5, 8.5)
 shape = SubResource("RectangleShape2D_yvwni")
