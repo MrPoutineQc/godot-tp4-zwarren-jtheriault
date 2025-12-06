@@ -3,6 +3,8 @@ extends CharacterBody2D
 const SPEED = 200.0
 const JUMP_VELOCITY = -275.0
 var can_double_jump = true
+var is_hurt = false
+
 
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -60,5 +62,7 @@ func _physics_process(delta: float) -> void:
 
 # --- Change animation seulement si elle est différente ---
 func _play_anim(name: String) -> void:
+	if is_hurt:
+		return
 	if animated_sprite.animation != name:
 		animated_sprite.play(name)
