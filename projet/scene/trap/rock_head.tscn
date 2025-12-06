@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://lulu6ali0n6y"]
+[gd_scene load_steps=31 format=3 uid="uid://lulu6ali0n6y"]
 
 [ext_resource type="Texture2D" uid="uid://8wefeg03s38b" path="res://assets/images/tilemaps/Traps/Rock Head/Blink (42x42).png" id="1_g7bpw"]
+[ext_resource type="Script" uid="uid://cj1og7e2ku2x5" path="res://script/trap/rock_head.gd" id="1_wwpd5"]
 [ext_resource type="Texture2D" uid="uid://dlsthyturbbi3" path="res://assets/images/tilemaps/Traps/Rock Head/Bottom Hit (42x42).png" id="2_wwpd5"]
 [ext_resource type="Texture2D" uid="uid://ct1a7jpwrq5n0" path="res://assets/images/tilemaps/Traps/Rock Head/Left Hit (42x42).png" id="3_rw7io"]
 [ext_resource type="Texture2D" uid="uid://b1nkctbodauls" path="res://assets/images/tilemaps/Traps/Rock Head/Right Hit (42x42).png" id="4_saddc"]
@@ -191,6 +192,7 @@ animations = [{
 size = Vector2(32, 33)
 
 [node name="rock_head" type="Area2D"]
+script = ExtResource("1_wwpd5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://c70r0dej141db"]
+[gd_scene load_steps=9 format=3 uid="uid://c70r0dej141db"]
 
+[ext_resource type="Script" uid="uid://c11iqfiw7olb0" path="res://script/trap/platforme.gd" id="1_i2x82"]
 [ext_resource type="Texture2D" uid="uid://cl704ei7fnkxy" path="res://assets/images/tilemaps/Traps/Falling Platforms/On (32x10).png" id="1_ofidd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2x82"]
@@ -42,6 +43,7 @@ animations = [{
 }]
 
 [node name="platforme" type="Area2D"]
+script = ExtResource("1_i2x82")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2.5)

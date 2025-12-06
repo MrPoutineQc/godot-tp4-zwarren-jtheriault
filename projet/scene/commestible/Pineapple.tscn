@@ -188,7 +188,8 @@ script = ExtResource("1_r2u3o")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2cpke")
-animation = &"collected"
+animation = &"pineapple"
+frame_progress = 0.615972
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_a3g76")
