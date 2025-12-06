@@ -188,10 +188,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1mv1"]
-size = Vector2(27, 41)
+size = Vector2(27, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3240"]
-size = Vector2(41, 27)
+size = Vector2(43, 27)
 
 [node name="Area2D" type="Area2D"]
 
@@ -206,5 +206,5 @@ shape = SubResource("RectangleShape2D_j1mv1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(0.5, 0.5)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_b3240")
