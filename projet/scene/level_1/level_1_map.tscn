@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://ni6wmmith0h2"]
+[gd_scene load_steps=19 format=4 uid="uid://ni6wmmith0h2"]
 
 [ext_resource type="Texture2D" uid="uid://biq3jte87jd6k" path="res://assets/images/sprites/Background/Blue.png" id="1_7k2r1"]
 [ext_resource type="Texture2D" uid="uid://cbmlwrgfdwurl" path="res://assets/images/tilemaps/Terrain/Terrain (16x16).png" id="1_ipsn0"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bsbjsckpaj5y7" path="res://scene/trap/trampoline.tscn" id="7_db3bs"]
 [ext_resource type="PackedScene" uid="uid://bypai5m7ex75c" path="res://scene/trap/spike.tscn" id="8_bqqg8"]
 [ext_resource type="Script" uid="uid://bb50rngydr72i" path="res://script/trap/void.gd" id="9_jamly"]
+[ext_resource type="PackedScene" uid="uid://fiyq75ejvaul" path="res://scene/checkpoint/finish.tscn" id="10_paqvt"]
+[ext_resource type="PackedScene" uid="uid://ctkn5f30joma7" path="res://scene/trap/fan.tscn" id="11_41xy0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_148cm"]
 texture = ExtResource("1_7k2r1")
@@ -347,6 +349,9 @@ sources/0 = SubResource("TileSetAtlasSource_btoer")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paqvt"]
 size = Vector2(162, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jamly"]
+size = Vector2(64.5, 182.5)
+
 [node name="Level_1_map" type="Node2D"]
 
 [node name="TileMapLayer_background" type="TileMapLayer" parent="."]
@@ -514,6 +519,21 @@ script = ExtResource("9_jamly")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_paqvt")
+
+[node name="mur_map" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur_map"]
+position = Vector2(-34, 328)
+shape = SubResource("RectangleShape2D_jamly")
+
+[node name="Finish" parent="." instance=ExtResource("10_paqvt")]
+texture_filter = 1
+position = Vector2(960, 240)
+
+[node name="fan" parent="." instance=ExtResource("11_41xy0")]
+position = Vector2(871, 602)
+rotation = -1.57079
+scale = Vector2(2.04001, 2.31999)
 
 [connection signal="body_entered" from="Area2D" to="Banana" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -124,8 +124,8 @@ script = ExtResource("1_lwmm5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rt5sc")
-frame = 5
-frame_progress = 0.894414
+frame = 4
+frame_progress = 0.576977
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
