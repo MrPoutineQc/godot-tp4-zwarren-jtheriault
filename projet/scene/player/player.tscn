@@ -291,7 +291,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"disappearing",
-"speed": 5.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
